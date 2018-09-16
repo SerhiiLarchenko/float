@@ -1,0 +1,54 @@
+/*-------------------
+		Grid
+--------------------*/
+*{
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1220px;
+	position: relative;
+}
+
+.column {
+	width: 100%;
+	float: left;
+}
+
+.column:first-child {
+	margin-left: 0;
+}
+
+img {
+	width: 100%;
+}
+
+@media (min-width: 769px) {
+
+	.container {width: 86%;}
+
+	.column {margin-left: 3%;}
+	.column:first-child {margin-left:0;}
+
+	.column.one    {width: 5.583333333%; }
+	.column.two    {width: 14.166666667%;}
+	.column.three  {width: 22.75%;       }
+	.column.four   {width: 31.333333333%;}
+	.column.five   {width: 39.916666667%;}
+	.column.six    {width: 48.5%;        }
+	.column.seven  {width: 57.083333333%;}
+	.column.eight  {width: 65.666666667%;}
+	.column.nine   {width: 74.25%;       }
+	.column.ten    {width: 82.833333333%;}
+	.column.eleven {width: 91.416666667%;}
+	.colunn.twelve {width: 100%; margin-left: 0;}
+
+}
+
+.container:after, .row:after, .clear:after {
+	content: "";
+	display: table;
+	clear: both;
+}
