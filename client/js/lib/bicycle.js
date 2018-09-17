@@ -1,6 +1,5 @@
 const bicycle = {};
 export default bicycle;
-
 //      DOM
 
 //Following function gets breakpoint and two arrays with callbacks.
