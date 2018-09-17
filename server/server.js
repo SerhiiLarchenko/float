@@ -8,17 +8,17 @@ const figlet = require("figlet");
 const fileServer = ecstatic({root: "../client"});
 
 http.createServer((request, response) => {
-	if (request.url == "/test") {
-		console.log("test");
-		let body = "", part = "";
-		request.on("readable", ()=> {
-			if (part = request.read()) body += part;
-		}).on("end", () => {
-			figlet.text(body,(error, data) => {
-				console.log(data);
-				if (error) console.error(error);
-				else response.end(data);
-			});
-		});
-	} else fileServer(request, response);
+    if (request.url == "/test") {
+        console.log("test");
+        let body = "", part = "";
+        request.on("readable", ()=> {
+            if (part = request.read()) body += part;
+        }).on("end", () => {
+            figlet.text(body,(error, data) => {
+                console.log(data);
+                if (error) console.error(error);
+                else response.end(data);
+            });
+        });
+    } else fileServer(request, response);
 }).listen(3000);
