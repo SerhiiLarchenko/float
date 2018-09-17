@@ -1,5 +1,6 @@
 const bicycle = {};
 export default bicycle;
+
 //      DOM
 
 //Following function gets breakpoint and two arrays with callbacks.
@@ -37,8 +38,7 @@ function animate({timing, depict, duration}){
 
 //This function accepts block element and optional animation duration
 //to gradually show it.
-function fadeIn(block, duration) {
-    if (!duration) duration = 200;
+function fadeIn(block, duration = 200) {
     block.style.height = "auto";
     let height = block.offsetHeight;
     block.style.height = 0;
@@ -52,8 +52,7 @@ function fadeIn(block, duration) {
 
 //The function recieves block element and optional animation duration
 //to fade out its' height.
-function fadeOut(block, duration) {
-    if (!duration) duration = 200;
+function fadeOut(block, duration = 200) {
     let height = block.offsetHeight;
     animate({
         duration: duration,
