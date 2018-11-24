@@ -9,7 +9,6 @@ const fileServer = ecstatic({root: "./"});
 
 http.createServer((request, response) => {
     if (request.url == "/test") {
-        console.log("test");
         let body = "", part = "";
         request.on("readable", ()=> {
             if (part = request.read()) body += part;
@@ -22,3 +21,5 @@ http.createServer((request, response) => {
         });
     } else fileServer(request, response);
 }).listen(3000);
+
+console.log("Listening on port:3000");
