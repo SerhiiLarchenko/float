@@ -5,7 +5,7 @@ const url = require("url");
 const ecstatic = require("ecstatic");
 const figlet = require("figlet");
 
-const fileServer = ecstatic({root: "../client"});
+const fileServer = ecstatic({root: "./"});
 
 http.createServer((request, response) => {
     if (request.url == "/test") {
